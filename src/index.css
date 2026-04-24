@@ -6,60 +6,60 @@
 
 @layer base {
   :root {
-    /* Dark futuristic AI theme */
-    --background: 230 35% 4%;
-    --foreground: 210 40% 98%;
+    /* Light, premium AI theme — soft white with neon accents */
+    --background: 240 30% 98%;
+    --foreground: 230 40% 12%;
 
-    --card: 230 30% 7%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 230 40% 12%;
 
-    --popover: 230 35% 6%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 40% 12%;
 
-    --primary: 265 90% 65%;
-    --primary-foreground: 230 35% 4%;
-    --primary-glow: 265 100% 75%;
+    --primary: 265 85% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 265 100% 70%;
 
-    --secondary: 195 100% 55%;
-    --secondary-foreground: 230 35% 4%;
+    --secondary: 195 90% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 230 25% 12%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 240 20% 95%;
+    --muted-foreground: 230 15% 45%;
 
-    --accent: 160 100% 55%;
-    --accent-foreground: 230 35% 4%;
+    --accent: 160 80% 42%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 85% 65%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 80% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --warning: 38 100% 60%;
+    --warning: 32 95% 55%;
 
-    --border: 230 25% 15%;
-    --input: 230 25% 12%;
-    --ring: 265 90% 65%;
+    --border: 240 20% 90%;
+    --input: 240 20% 94%;
+    --ring: 265 85% 58%;
 
     --radius: 1rem;
 
     /* Custom semantic tokens */
-    --neon-blue: 210 100% 60%;
-    --neon-purple: 280 90% 65%;
-    --neon-cyan: 185 100% 55%;
-    --neon-green: 150 100% 55%;
-    --neon-pink: 320 90% 65%;
+    --neon-blue: 215 95% 55%;
+    --neon-purple: 270 85% 60%;
+    --neon-cyan: 190 90% 45%;
+    --neon-green: 155 75% 42%;
+    --neon-pink: 325 85% 60%;
 
-    --gradient-bg: radial-gradient(ellipse at top, hsl(265 60% 12%) 0%, hsl(230 40% 5%) 50%, hsl(230 40% 3%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(265 90% 65%) 0%, hsl(195 100% 55%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(195 100% 55%) 0%, hsl(160 100% 55%) 100%);
-    --gradient-danger: linear-gradient(135deg, hsl(0 85% 65%) 0%, hsl(320 90% 65%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(230 30% 9% / 0.8) 0%, hsl(230 35% 6% / 0.6) 100%);
+    --gradient-bg: radial-gradient(ellipse at top left, hsl(265 100% 95%) 0%, hsl(195 100% 96%) 35%, hsl(240 30% 98%) 70%, hsl(160 80% 96%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(265 85% 58%) 0%, hsl(195 90% 50%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(195 90% 50%) 0%, hsl(160 80% 45%) 100%);
+    --gradient-danger: linear-gradient(135deg, hsl(0 80% 60%) 0%, hsl(325 85% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.85) 0%, hsl(240 30% 99% / 0.7) 100%);
 
-    --glow-primary: 0 0 40px hsl(265 90% 65% / 0.4), 0 0 80px hsl(265 90% 65% / 0.2);
-    --glow-cyan: 0 0 30px hsl(195 100% 55% / 0.5), 0 0 60px hsl(195 100% 55% / 0.2);
-    --glow-green: 0 0 30px hsl(160 100% 55% / 0.5);
-    --glow-danger: 0 0 30px hsl(0 85% 65% / 0.5);
+    --glow-primary: 0 10px 40px hsl(265 85% 58% / 0.25), 0 0 80px hsl(265 85% 58% / 0.12);
+    --glow-cyan: 0 8px 30px hsl(195 90% 50% / 0.3);
+    --glow-green: 0 8px 30px hsl(160 80% 45% / 0.3);
+    --glow-danger: 0 8px 30px hsl(0 80% 60% / 0.3);
 
-    --shadow-elegant: 0 20px 60px -10px hsl(265 90% 30% / 0.5);
-    --shadow-glass: inset 0 1px 0 0 hsl(0 0% 100% / 0.05), 0 8px 32px hsl(230 50% 2% / 0.4);
+    --shadow-elegant: 0 20px 60px -10px hsl(265 60% 50% / 0.25);
+    --shadow-glass: 0 1px 0 0 hsl(0 0% 100% / 0.8) inset, 0 10px 40px -10px hsl(230 40% 30% / 0.15);
 
     --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -86,12 +86,12 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(hsl(265 90% 65% / 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(265 90% 65% / 0.04) 1px, transparent 1px);
+      linear-gradient(hsl(265 85% 58% / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(265 85% 58% / 0.06) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
     z-index: 0;
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
   }
 
   ::selection {
@@ -115,10 +115,10 @@
   }
 
   .glass-strong {
-    background: hsl(230 30% 8% / 0.8);
+    background: hsl(0 0% 100% / 0.85);
     backdrop-filter: blur(24px);
-    border: 1px solid hsl(var(--primary) / 0.2);
-    box-shadow: var(--shadow-glass), 0 0 0 1px hsl(var(--primary) / 0.05);
+    border: 1px solid hsl(var(--primary) / 0.15);
+    box-shadow: var(--shadow-glass), 0 0 0 1px hsl(var(--primary) / 0.04);
   }
 
   .neon-border {
