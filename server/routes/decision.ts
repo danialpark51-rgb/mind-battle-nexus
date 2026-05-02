@@ -32,7 +32,7 @@ export function decisionRouter(): Router {
     if (!parsed.success) {
       return res.status(400).json({
         error: "Invalid request",
-        details: fromZodError(parsed.error).message,
+        details: fromZodError(parsed.error as never).message,
       });
     }
 
